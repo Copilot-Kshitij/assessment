@@ -49,61 +49,71 @@ body {
 
 
 .chart-container {
-background-color:  #f8f9fa;
+  background-color: #f8f9fa;
   border-radius: 8px;
   padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin-bottom: 20px;
 }
-.container{
+
+.container {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   background-color: rgb(162, 161, 223);
 }
 
+
 @media only screen and (max-width: 1199px) {
   .chart-container {
-    width: 125%;
-    margin: 0;
-    
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .table th, 
+  .table td {
+    font-size: 12px;
+    padding: 10px;
   }
 }
 
-.chart-title {
-  font-size: 16px;
-  font-weight: bold;
-  color: #333;
-  margin-bottom: 15px;
+
+@media only screen and (max-width: 768px) {
+  
+
+  .table th,
+  .table td {
+    font-size: 10px;
+    padding: 8px;
+  }
+
+  .chart-container {
+    padding: 15px;
+  }
 }
 
 
-.dashboard-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
-  padding: 20px;
+@media only screen and (max-width: 480px) {
+  .dashboard-header {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .chart-container {
+    padding: 10px;
+  }
+
+  .table {
+    font-size: 10px;
+  }
+
+  .table th,
+  .table td {
+    font-size: 8px;
+    padding: 5px;
+  }
+
+  .container {
+    padding: 1rem;
+  }
 }
-
-.dashboard-header {
-  font-size: 24px;
-  font-weight: bold;
-  color: #333;
-  margin-bottom: 20px;
-}
-
-
-.recharts-wrapper {
-  margin: 0 auto;
-}
-
-.pie-chart .recharts-sector {
-  stroke: #fff;
-  stroke-width: 2px;
-}
-
-.bar-chart .recharts-bar {
-  border-radius: 4px;
-}
-
-
