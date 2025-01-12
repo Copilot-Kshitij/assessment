@@ -35,7 +35,7 @@ body {
 }
 
 .table th:hover {
-  background-color: #e9ecef;
+  background-color: #afd4f9;
 }
 
 .table td {
@@ -44,16 +44,30 @@ body {
 }
 
 .table tbody tr:hover {
-  background-color: #f8f9fa;
+  background-color: #b2d5f8;
 }
 
 
 .chart-container {
-  background-color: #fff;
+background-color:  #f8f9fa;
   border-radius: 8px;
   padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin-bottom: 20px;
+}
+.container{
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: rgb(162, 161, 223);
+}
+
+@media only screen and (max-width: 1199px) {
+  .chart-container {
+    width: 125%;
+    margin: 0;
+    
+  }
 }
 
 .chart-title {
