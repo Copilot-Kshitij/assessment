@@ -13,7 +13,7 @@ const DataFetcher = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await fetch("../Electric_Vehicle_Population_Data.csv");
+      const response = await fetch("/Electric_Vehicle_Population_Data.csv");
       const reader = response.body.getReader();
       const decoder = new TextDecoder("utf-8");
       const result = await reader.read();
