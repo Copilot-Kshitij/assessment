@@ -19,7 +19,7 @@ const LineChartComponent = () => {
     .sort((a, b) => a.year - b.year);
 
   return (
-    <LineChart width={800} height={400} data={chartData}>
+    <LineChart width={400} height={400} data={chartData}>
       <CartesianGrid strokeDasharray="3 3" />
       <XAxis dataKey="year" />
       <YAxis />

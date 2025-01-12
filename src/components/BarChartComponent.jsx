@@ -18,7 +18,7 @@ const BarChartComponent = () => {
   }));
 
   return (
-    <BarChart width={1000} height={400} data={chartData}>
+    <BarChart width={400} height={400} data={chartData}>
       <CartesianGrid strokeDasharray="3 3" />
       <XAxis dataKey="name" />
       <YAxis />

@@ -1,13 +1,33 @@
 import React, { useState } from "react";
 
 const DataTable = ({ data }) => {
+
+
   const [sortConfig, setSortConfig] = useState({ key: null, direction: "asc" });
+
+  const displayedFields = [
+    "Model",
+    "Model Year",
+    "Make",
+    "Electric Vehicle Type",
+    "Electric Range",
+    "Clean Alternative Fuel Vehicle (CAFV) Eligibility",
+    "Base MSRP",
+    "Electric Utility",
+  ];
 
   if (!data || data.length === 0) {
     return <p>No data available.</p>;
   }
 
-  const sortedData = [...data].sort((a, b) => {
+
+  const filteredData = data.map((item) =>
+    Object.fromEntries(
+      Object.entries(item).filter(([key]) => displayedFields.includes(key))
+    )
+  );
+
+  const sortedData = [...filteredData].sort((a, b) => {
     if (sortConfig.key === null) return 0;
 
     const aValue = a[sortConfig.key];
@@ -36,7 +56,7 @@ const DataTable = ({ data }) => {
       <thead>
         <tr>
           <th>#</th>
-          {Object.keys(data[0]).map((key) => (
+          {displayedFields.map((key) => (
             <th key={key} onClick={() => handleSort(key)} style={{ cursor: "pointer" }}>
               {key}
               {sortConfig.key === key ? (
@@ -52,8 +72,8 @@ const DataTable = ({ data }) => {
         {sortedData.map((row, index) => (
           <tr key={index}>
             <td>{index + 1}</td>
-            {Object.values(row).map((value, i) => (
-              <td key={i}>{value}</td>
+            {displayedFields.map((field, i) => (
+              <td key={i}>{row[field]}</td>
             ))}
           </tr>
         ))}

@@ -1,4 +1,4 @@
-/* General Styles */
+
 body {
   font-family: 'Roboto', Arial, sans-serif;
   background-color: #f7f9fc;
@@ -7,7 +7,7 @@ body {
   padding: 0;
 }
 
-/* Table Styles */
+
 .table {
   width: 100%;
   border-collapse: collapse;
@@ -47,7 +47,7 @@ body {
   background-color: #f8f9fa;
 }
 
-/* Chart Container Styles */
+
 .chart-container {
   background-color: #fff;
   border-radius: 8px;
@@ -63,7 +63,7 @@ body {
   margin-bottom: 15px;
 }
 
-/* Responsive Grid for Dashboard Layout */
+
 .dashboard-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -78,7 +78,7 @@ body {
   margin-bottom: 20px;
 }
 
-/* Subtle Colors for Charts */
+
 .recharts-wrapper {
   margin: 0 auto;
 }
@@ -92,18 +92,4 @@ body {
   border-radius: 4px;
 }
 
-/* Buttons and Interactions */
-button {
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  background-color: #007bff;
-  color: #fff;
-  cursor: pointer;
-  font-size: 14px;
-  transition: background-color 0.3s ease;
-}
 
-button:hover {
-  background-color: #0056b3;
-}
